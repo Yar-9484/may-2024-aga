@@ -3,20 +3,35 @@ package lessons.lesson1;
 import org.testng.annotations.*;
 
 public class FirstTest {
-    @BeforeGroups(groups = {"first group"})
-    public void beforeGroup(){
-        System.out.println("This is before group method");
-    }
-    @BeforeClass(groups = {"first group"})
+//    @BeforeGroups(groups = {"first group"})
+//    public void beforeGroup(){
+//        System.out.println("This is before group method");
+//    }
+//    @BeforeClass(groups = {"first group"})
+//    public void openURL(){
+//        System.out.println("Open URL");
+//    }
+
+    @BeforeClass
     public void openURL(){
         System.out.println("Open URL");
+    }
+    @BeforeSuite
+    public void beforeSuite(){
+        System.out.println("This is before suite method");
     }
 
     @BeforeMethod
     public void login() {
         System.out.println("The user logged in");
     }
-    @Test(groups = {"first group"})
+//    @Test(groups = {"first group"})
+//    public void firstTest(){
+//        System.out.println("This is our first test");
+//
+//    }
+
+    @Test
     public void firstTest(){
         System.out.println("This is our first test");
 
